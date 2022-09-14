@@ -4,14 +4,18 @@ import { RouterModule } from '@angular/router';
 
 
 import { AppComponent } from './app.component';
+import { TopBarComponent } from './top-bar/top-bar.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TopBarComponent
   ],
   imports: [
     BrowserModule,
-    RouterModule
+    RouterModule.forRoot([
+      { path: '', component: TopBarComponent },
+    ])
   ],
   providers: [],
   bootstrap: [AppComponent]
